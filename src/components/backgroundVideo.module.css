@@ -1,0 +1,16 @@
+.videoContainer {
+    min-height: 100vh;
+    /*min-width: 100vw;*/
+    position: fixed;
+    opacity: 0.6;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+.video {
+    position: absolute;
+    object-fit: fill;
+    min-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    -webkit-filter: blur(10px);
+}
