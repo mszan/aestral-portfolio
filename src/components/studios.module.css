@@ -13,7 +13,7 @@
 
 .studiosCoverImg {
     width: 300px;
-    margin: 0 0.15rem 0.15rem 0.15rem;
+    margin: 0 2px 2px 2px;
     filter:blur(1px) brightness(50%) grayscale(100%);
     transition-duration: .05s;
     display: inline-block;

@@ -8,26 +8,19 @@
     transform: translate(-50%, -50%);
 }
 
-@media(min-width: 400px) {
-    .landingFaceWrapper {
-        width: 70%;
-    }
-}
-
 .soundCloudPlayerWrapper {
     margin: auto;
 }
 
+@media(min-width: 376px) {
+    .landingFaceWrapper {
+        width: 70%;
+    }
+}
 
 /*MAIN FACE STYLES*/
 
 .mainFaceWrapper {
     position: absolute;
     width: 100%;
-}
-
-@media(min-width: 400px) {
-    .mainFaceWrapper {
-
-    }
 }

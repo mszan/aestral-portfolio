@@ -2,6 +2,8 @@ import React from 'react';
 import BackgroundVideo from "./components/backgroundVideo";
 import Face from "./components/face";
 import { CSSTransitionGroup } from 'react-transition-group' // ES6
+import classes from './App.css'
+
 
 
 class App extends React.Component {
@@ -22,10 +24,18 @@ class App extends React.Component {
         return (
             <React.StrictMode>
                     <BackgroundVideo/>
-                    <Face
-                        setSelectedPage = {this.setSelectedPage}
-                        selectedPage = {this.state.selectedPage}
-                    />
+                    <CSSTransitionGroup
+                        transitionName="example"
+                        transitionAppear={true}
+                        // >
+                        >
+                        <Face
+                            key = {this.state.selectedPage}
+                            setSelectedPage = {this.setSelectedPage}
+                            selectedPage = {this.state.selectedPage}
+                        />
+                    </CSSTransitionGroup>
+
             </React.StrictMode>
         );
     }

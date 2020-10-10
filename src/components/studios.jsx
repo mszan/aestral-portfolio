@@ -44,19 +44,20 @@ class Studios extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
+            <div>
                 {this.state.loading ? (
                     <ClipLoader
-                        css={'text-align: center; display: block; margin: auto;'}
+                        css={'text-align: center; display: block; margin: auto; top: 50%;'}
                         size={200}
                         color={"#fff"}
                         loading={this.state.loading}
                     />
                 ) : null}
-                <div className={classes.studiosWrapper}>
+                <div className={classes.studiosWrapper}
+                     style={{display: this.state.loading ? 'none' : 'block' }}>
                     {this.getCovers()}
                 </div>
-            </React.Fragment>
+            </div>
 
         );
     }
