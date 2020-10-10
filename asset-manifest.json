@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/aestral_portfolio/static/css/main.d681d992.chunk.css",
+    "main.js": "/aestral_portfolio/static/js/main.6ba0c430.chunk.js",
+    "main.js.map": "/aestral_portfolio/static/js/main.6ba0c430.chunk.js.map",
+    "runtime-main.js": "/aestral_portfolio/static/js/runtime-main.8acd9cd9.js",
+    "runtime-main.js.map": "/aestral_portfolio/static/js/runtime-main.8acd9cd9.js.map",
+    "static/js/2.1cdf021c.chunk.js": "/aestral_portfolio/static/js/2.1cdf021c.chunk.js",
+    "static/js/2.1cdf021c.chunk.js.map": "/aestral_portfolio/static/js/2.1cdf021c.chunk.js.map",
+    "index.html": "/aestral_portfolio/index.html",
+    "precache-manifest.dfaf27e36910869a8e234f35bd9523f1.js": "/aestral_portfolio/precache-manifest.dfaf27e36910869a8e234f35bd9523f1.js",
+    "service-worker.js": "/aestral_portfolio/service-worker.js",
+    "static/css/main.d681d992.chunk.css.map": "/aestral_portfolio/static/css/main.d681d992.chunk.css.map",
+    "static/js/2.1cdf021c.chunk.js.LICENSE.txt": "/aestral_portfolio/static/js/2.1cdf021c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8acd9cd9.js",
+    "static/js/2.1cdf021c.chunk.js",
+    "static/css/main.d681d992.chunk.css",
+    "static/js/main.6ba0c430.chunk.js"
+  ]
+}
