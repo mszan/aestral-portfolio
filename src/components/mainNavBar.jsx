@@ -1,6 +1,8 @@
 import React from 'react';
 
 import classes from './mainNavBar.module.css'
+import {MainLogo} from "./mainLogo";
+import {SocialSmall} from "./socialSmall";
 
 
 class MainNavBar extends React.Component {
@@ -13,6 +15,8 @@ class MainNavBar extends React.Component {
         const setSelectedPage = this.props.setSelectedPage;
         return (
             <div className={classes.navBarWrapper}>
+                <MainLogo/>
+                <SocialSmall/>
                 <nav className={classes.navBar}>
                     <ul>
                         <li><a
