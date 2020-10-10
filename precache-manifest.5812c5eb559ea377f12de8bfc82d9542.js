@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c4744df5b80338f27b40f3aed5b14b82",
+    "revision": "2a6e0f95fb1d5e2223d7932e960d9479",
     "url": "/aestral_portfolio/index.html"
   },
   {
-    "revision": "4083b5f4f1cc23675049",
+    "revision": "f5847489e69d116f425f",
     "url": "/aestral_portfolio/static/css/main.d681d992.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aestral_portfolio/static/js/2.1cdf021c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4083b5f4f1cc23675049",
-    "url": "/aestral_portfolio/static/js/main.8d7a9e33.chunk.js"
+    "revision": "f5847489e69d116f425f",
+    "url": "/aestral_portfolio/static/js/main.e8b3f9ed.chunk.js"
   },
   {
     "revision": "893bd6744b96190aaccf",
