@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import classes from './backgroundVideo.module.css'
 
 const BackgroundVideo = () => {
-    const videoSource = '/video/backgroundVideo.mp4'
+    const videoSource = './video/backgroundVideo.mp4'
     return (
         <div className={classes.videoContainer}>
             <video

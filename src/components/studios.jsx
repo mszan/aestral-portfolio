@@ -31,7 +31,7 @@ class Studios extends React.Component {
         let coversAmount = 6;
         let res = [];
         for(let i = 1; i <= coversAmount; i++) {
-            let imgSource = `/img/studios/cover${i}.png`
+            let imgSource = `./img/studios/cover${i}.png`
             res.push(<img
                 className={classes.studiosCoverImg}
                 src={imgSource}
