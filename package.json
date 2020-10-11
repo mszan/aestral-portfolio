@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "homepage": "https://mszan.github.io/aestral_portfolio/",
+=======
+  "homepage": "https://aestral.mszanowski.pl/",
+>>>>>>> 147963a... Deploy to custom domain
   "name": "aestral_portfolio",
   "version": "1.0.0",
   "private": true,
