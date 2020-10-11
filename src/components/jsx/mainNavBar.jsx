@@ -14,27 +14,27 @@ export const MainNavBar = (props) => {
             </div>
             <nav className={classes.navBar}>
                 <ul>
-                    <li><a
+                    <li key={0}><span
                         className={`${classes.btn} ${classes.btn2}`}
                         onClick={() => setSelectedPage(0)}
-                    >HOME</a></li>
+                    >HOME</span></li>
 
-                    <li><a
+                    <li key={1}><span
                         className={`${classes.btn} ${classes.btn2}`}
                         onClick={() => setSelectedPage(1)}
-                    >ABOUT</a></li>
+                    >ABOUT</span></li>
 
-                    <li><a
+                    <li key={2}><span
                         className={`${classes.btn} ${classes.btn2}`}
                         onClick={() => setSelectedPage(2)}
-                    >WORK</a></li>
+                    >WORK</span></li>
 
-                    <li><a
+                    <li key={3}><span
                         className={`${classes.btn} ${classes.btn2}`}
                         onClick={() => setSelectedPage(3)}
-                    >ASTRALÉ STUDIOS</a></li>
+                    >ASTRALÉ STUDIOS</span></li>
 
-                    <li><a
+                    <li key={'beats'}><a
                         className={`${classes.btn} ${classes.btn2}`}
                         href="https://traktrain.com/aestral"
                     >BEATS</a></li>

@@ -9,20 +9,20 @@ export const LandingNavBar = (props) => {
         <div className={classes.navBarWrapper}>
             <nav className={classes.navBar}>
                 <ul>
-                    <li><a
+                    <li><span
                         className={`${classes.btn} ${classes.btn2}`}
                         onClick={() => setSelectedPage(1)}
-                    >ABOUT</a></li>
+                    >ABOUT</span></li>
 
-                    <li><a
+                    <li><span
                         className={`${classes.btn} ${classes.btn2}`}
                         onClick={() => setSelectedPage(2)}
-                    >WORK</a></li>
+                    >WORK</span></li>
 
-                    <li><a
+                    <li><span
                         className={`${classes.btn} ${classes.btn2}`}
                         onClick={() => setSelectedPage(3)}
-                    >ASTRALÉ STUDIOS</a></li>
+                    >ASTRALÉ STUDIOS</span></li>
 
                     <li><a
                         className={`${classes.btn} ${classes.btn2}`}

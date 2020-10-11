@@ -59,3 +59,9 @@
     opacity: 0.01;
     transition: opacity 300ms ease-in;
 }
+
+.loaderWrapper h2 {
+    text-align: center;
+    font-weight: lighter;
+    color: gray;
+}

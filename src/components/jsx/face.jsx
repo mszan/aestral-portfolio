@@ -8,7 +8,6 @@ import {MainNavBar} from "./mainNavBar";
 import {Studios} from "./studios";
 import Work from "./work";
 import classes from '../css/face.module.css'
-import { CSSTransitionGroup } from 'react-transition-group'
 
 
 export const Face = (props) => {

@@ -48,13 +48,14 @@ class Work extends React.Component {
             let src = `https://open.spotify.com/embed/track/${value}`
             res.push(
                 <div
+                    key={src}
                     className={classes.track}>
                     <iframe
+                        title={src}
                         src={src}
                         width="300"
                         height="380"
                         frameBorder="0"
-                        allowTransparency="true"
                         allow="encrypted-media"
                         onLoad={this.iframeLoadedAmountAdd}/>
                 </div>
@@ -67,16 +68,22 @@ class Work extends React.Component {
         return (
             <div>
                 {this.state.loading ? (
-                    <ClipLoader
-                        css={'text-align: center; display: block; margin: auto; top: 50%;'}
-                        size={200}
-                        color={"#fff"}
-                        loading={this.state.loading}/>
+                    <div className={classes.loaderWrapper}>
+                        <ClipLoader
+                            css={'text-align: center; display: block; margin: auto; top: 50%;'}
+                            size={200}
+                            color={"#fff"}
+                            loading={this.state.loading}/>
+                        <h2>Fetching Spotify data...</h2>
+                    </div>
                 ) : null}
 
                 <CSSTransitionGroup
                     transitionName="transition"
-                    transitionAppear={true}>
+                    transitionAppear={true}
+                    transitionAppearTimeout={2000}
+                    transitionEnterTimeout={2000}
+                    transitionLeaveTimeout={2000}>
                 <div
                     className={classes.workWrapper}
                     style={{opacity: this.state.loading ? 0 : 1 }}>
@@ -85,6 +92,7 @@ class Work extends React.Component {
                         className={classes.vimeo}
                         style={{opacity: this.state.loading ? 0 : 1 }}>
                         <iframe
+                            title={'vimeo'}
                             className={classes.vimeoIframe}
                             src="https://player.vimeo.com/video/320441870?color=ce0000"
                             frameBorder="0"

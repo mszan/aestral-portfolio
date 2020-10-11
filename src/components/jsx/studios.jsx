@@ -31,9 +31,10 @@ export class Studios extends React.Component {
         let coversAmount = 6;
         let res = [];
         for(let i = 1; i <= coversAmount; i++) {
-            let imgSource = `${process.env.PUBLIC_URL}/img/studios/cover${i}.png`
+            let imgSource = `${process.env.PUBLIC_URL}/img/studios/cover${i}.jpg`
             res.push(<img
                 className={`${classes.studiosImg} ${classes.studiosImgCover}`}
+                key={imgSource}
                 src={imgSource}
                 alt={imgSource}
                 onLoad={this.imgLoadedAmountAdd}
@@ -46,20 +47,23 @@ export class Studios extends React.Component {
         return (
             <div>
                 {this.state.loading ? (
-                    <ClipLoader
-                        css={'text-align: center; display: block; margin: auto; top: 50%;'}
-                        size={200}
-                        color={"#fff"}
-                        loading={this.state.loading}
-                    />
+                    <div className={classes.loaderWrapper}>
+                        <ClipLoader
+                            css={'text-align: center; display: block; margin: auto; top: 50%;'}
+                            size={200}
+                            color={"#fff"}
+                            loading={this.state.loading}/>
+                        <h2>Fetching images...</h2>
+                    </div>
                 ) : null}
                 <div className={classes.studiosWrapper}
                      style={{opacity: this.state.loading ? 0 : 1 }}>
                     {this.getCovers()}
                     <img
                         className={`${classes.studiosImg} ${classes.studiosImgBanner}`}
-                        src={`${process.env.PUBLIC_URL}/img/studios/banner1.png`}
-                        alt={`${process.env.PUBLIC_URL}/img/studios/banner1.png`}
+                        key={`${process.env.PUBLIC_URL}/img/studios/banner1.jpg`}
+                        src={`${process.env.PUBLIC_URL}/img/studios/banner1.jpg`}
+                        alt={`${process.env.PUBLIC_URL}/img/studios/banner1.jpg`}
                         onLoad={this.imgLoadedAmountAdd}
                     />
                 </div>

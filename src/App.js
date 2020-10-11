@@ -6,8 +6,8 @@ import classes from './App.css'
 
 
 class App extends React.Component {
-    constructor() {
-        super(App);
+    constructor(props) {
+        super(props);
         this.state={
             selectedPage:0,
         }
@@ -21,19 +21,21 @@ class App extends React.Component {
 
     render() {
         return (
-            <React.StrictMode>
-                    <BackgroundVideo/>
-                    <CSSTransitionGroup
-                        transitionName="transition"
-                        transitionAppear={true}>
-                        <Face
-                            key = {this.state.selectedPage}
-                            setSelectedPage = {this.setSelectedPage}
-                            selectedPage = {this.state.selectedPage}
-                        />
-                    </CSSTransitionGroup>
-
-            </React.StrictMode>
+            <div className={classes.appWrapper}>
+                <BackgroundVideo/>
+                <CSSTransitionGroup
+                    transitionName="transition"
+                    transitionAppear={true}
+                    transitionAppearTimeout={2000}
+                    transitionEnterTimeout={2000}
+                    transitionLeaveTimeout={2000}>
+                    <Face
+                        key = {this.state.selectedPage}
+                        setSelectedPage = {this.setSelectedPage}
+                        selectedPage = {this.state.selectedPage}
+                    />
+                </CSSTransitionGroup>
+            </div>
         );
     }
 }

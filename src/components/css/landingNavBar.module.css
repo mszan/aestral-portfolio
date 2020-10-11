@@ -20,6 +20,13 @@
     text-decoration: none;
 }
 
+.navBar li span{
+    display:block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
 .btn {
     box-sizing: inherit;
     transition-property: all;

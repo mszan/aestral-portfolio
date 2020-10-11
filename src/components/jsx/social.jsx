@@ -9,8 +9,7 @@ export const Social = () => {
     ]
     return (
         socials.map((value, index) => {
-                console.log(index, value)
-                return <a href={socials[index].href}><img
+                return <a href={socials[index].href} key={socials[index].href}><img
                     src={process.env.PUBLIC_URL + socials[index].img}
                     alt={socials[index].img}/></a>
         })
