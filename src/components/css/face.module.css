@@ -1,0 +1,34 @@
+/*LANDING FACE STYLES*/
+
+.landingFaceWrapper {
+    position: fixed;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.soundCloudPlayerWrapper {
+    margin: auto;
+}
+
+@media(min-width: 376px) {
+    .landingFaceWrapper {
+        width: 50%;
+    }
+}
+
+/*MAIN FACE STYLES*/
+
+.mainFaceWrapper {
+    position: absolute;
+    width: 100%;
+}
+
+.socialWrapper {
+    text-align: center;
+}
+.socialWrapper img {
+    height: 35px;
+    margin: 0.5rem;
+}

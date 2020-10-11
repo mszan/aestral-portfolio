@@ -1,0 +1,61 @@
+.workWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 998px;
+}
+
+.track {
+    margin: 0 2px 2px 2px;
+    opacity: 1;
+    transition: opacity .5s ease-in;
+    display: inline-block;
+}
+
+.vimeo {
+    margin: 1rem;
+    display: inline-block;
+    transition: opacity 1s ease-in;
+}
+
+.vimeoIframe{
+    width: 300px;
+    height: 197px;
+}
+
+
+@media only screen and (min-width: 376px) {
+    .vimeoIframe {
+        width: 908px;
+        height: 500px;
+    }
+}
+
+/* TRANSITIONS */
+
+.transition-appear {
+    opacity: 0.01;
+}
+
+.transition-appear.transition-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+.transition-enter {
+    opacity: 0.01;
+}
+
+.transition-enter.transition-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.transition-leave {
+    opacity: 1;
+}
+
+.transition-leave.transition-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
