@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/aestral_portfolio/precache-manifest.785fc5ed65e9a9200211ff0edf246475.js"
+  "/aestral_portfolio/precache-manifest.fb885a51c468c856e6a0e56edcc7b35d.js"
 );
 
 self.addEventListener('message', (event) => {
