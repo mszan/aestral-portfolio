@@ -81,9 +81,9 @@ class Work extends React.Component {
                 <CSSTransitionGroup
                     transitionName="transition"
                     transitionAppear={true}
-                    transitionAppearTimeout={2000}
-                    transitionEnterTimeout={2000}
-                    transitionLeaveTimeout={2000}>
+                    transitionAppearTimeout={500}
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={300}>
                 <div
                     className={classes.workWrapper}
                     style={{opacity: this.state.loading ? 0 : 1 }}>
