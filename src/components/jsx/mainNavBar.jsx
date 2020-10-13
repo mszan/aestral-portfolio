@@ -1,17 +1,15 @@
 import React from 'react';
 
 import classes from '../css/mainNavBar.module.css'
-import {MainLogo} from "./mainLogo";
 import {Social} from "./social";
-import {
-    BrowserRouter as Router,
-    Link
-} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export const MainNavBar = (props) => {
     return (
         <div className={classes.navBarWrapper}>
-            <MainLogo/>
+            <div className={classes.mainLogoWrapper}>
+                <img src={process.env.PUBLIC_URL + '/img/logos/aestral_logo_slim.png'} alt=""/>
+            </div>
             <div className={classes.socialWrapperSmall}>
                 <Social/>
             </div>
