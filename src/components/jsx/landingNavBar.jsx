@@ -1,28 +1,27 @@
 import React from 'react';
-
 import classes from '../css/landingNavBar.module.css'
+import {
+    BrowserRouter as Router,
+    Link
+} from 'react-router-dom'
 
 
 export const LandingNavBar = (props) => {
-    const setSelectedPage = props.setSelectedPage;
     return (
         <div className={classes.navBarWrapper}>
             <nav className={classes.navBar}>
                 <ul>
-                    <li><span
-                        className={`${classes.btn} ${classes.btn2}`}
-                        onClick={() => setSelectedPage(1)}
-                    >ABOUT</span></li>
+                    <li><Link to="/about"
+                              className={`${classes.btn} ${classes.btn2}`}
+                    >ABOUT</Link></li>
 
-                    <li><span
-                        className={`${classes.btn} ${classes.btn2}`}
-                        onClick={() => setSelectedPage(2)}
-                    >WORK</span></li>
+                    <li><Link to="/work"
+                              className={`${classes.btn} ${classes.btn2}`}
+                    >WORK</Link></li>
 
-                    <li><span
-                        className={`${classes.btn} ${classes.btn2}`}
-                        onClick={() => setSelectedPage(3)}
-                    >ASTRALÉ STUDIOS</span></li>
+                    <li><Link to="/studios"
+                              className={`${classes.btn} ${classes.btn2}`}
+                    >ASTRALÉ STUDIOS</Link></li>
 
                     <li><a
                         className={`${classes.btn} ${classes.btn2}`}
