@@ -1,5 +1,5 @@
 import React from 'react';
-import app_classes from '../../app.module.css'
+import face_classes from '../css/face.module.css'
 import studios_classes from '../css/studios.module.css'
 import ClipLoader from "react-spinners/ClipLoader";
 import {MainNavBar} from "./mainNavBar";
@@ -47,7 +47,7 @@ export class Studios extends React.Component {
 
     render() {
         return (
-            <div className={app_classes.faceWrapper}>
+            <div className={face_classes.faceWrapper}>
                 <MainNavBar/>
                 <div>
                     {this.state.loading ? (

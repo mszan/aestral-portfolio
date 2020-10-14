@@ -3,6 +3,8 @@
     margin-right: auto;
     text-align: center;
     max-width: 998px;
+    opacity: 0;
+    transition: opacity .5s ease-in;
 }
 
 .track {

@@ -1,14 +1,21 @@
 import React from 'react';
-import app_classes from '../../app.module.css'
+import face_classes from '../css/face.module.css'
 import about_classes from '../css/about.module.css'
 import {MainNavBar} from "./mainNavBar";
 import {Footer} from "./footer";
+import {CSSTransitionGroup} from "react-transition-group";
 
 export const About = () => {
     return (
-        <div className={app_classes.faceWrapper}>
+        <div className={face_classes.faceWrapper}>
             <MainNavBar/>
-            <div className={about_classes.aboutWrapper}>
+            <CSSTransitionGroup
+                transitionName="transition"
+                transitionAppear={true}
+                transitionAppearTimeout={500}
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={300}>
+                <div className={about_classes.aboutWrapper}>
                 <span className={about_classes.aboutTextBase}>
                     BORN IN YEAR 2000. THE NEW MILLENNIUM<br/><br/>
                     <span className={about_classes.aboutTextHeavy}>ÆSTRAL AND THE ORIGINALITY AND CONSTRUCTION OF SONGS HE HAS BEEN CREATING, BROUGHT A HUGE ATTENTION TO HIS NAME RELEASING A TRACK CALLED "HALF LIGHT" IN YEAR 2017.</span><br/><br/>
@@ -18,8 +25,9 @@ export const About = () => {
                     <span className={about_classes.aboutTextHeavy}>WITH MANY ACHIEVEMENTS, IN VARIOUS DIRECTIONS LIKE AWARDS ON THE FILM FESTIVALS FOR THE BEST MUSIC VIDEO (RUNAWAY) OR PERFORMANCES ON ONE OF THE BIGGEST UNDERGROUND FESTIVALS IN EUROPE - "CZELUSC" - MAKE THE ARTIST A TRUE ALL-ROUNDER, CONSIDERING ALL HIS WORK ON MUSIC, GRAPHIC DESIGN, FILM AND WEBDESIGN.</span><br/><br/>
                     HIS GOAL? SOUNDTRACKS. DUE TO HUGE INFLUENCE FROM THE ORCHESTRAL AND FILM MUSIC, THE ARTIST'S DREAM IS TO PRODUCE MUSIC TO FILMS AND SERIES, AND WHO KNOWS - IT MAY AS WELL HAPPEN ONE DAY...<br/><br/>
                 </span>
-            </div>
-            <Footer/>
+                </div>
+                <Footer/>
+            </CSSTransitionGroup>
         </div>
     );
 };
