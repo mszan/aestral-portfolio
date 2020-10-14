@@ -1,3 +1,25 @@
+/*LANDING MAIN STYLES*/
+
+.landingWrapper {
+    position: fixed;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.soundCloudPlayerWrapper {
+    margin: auto;
+}
+
+@media(min-width: 376px) {
+    .landingWrapper {
+        width: 50%;
+    }
+}
+
+/*NAVBAR STYLES*/
+
 .navBarWrapper {
     width: 100%;
 }
@@ -77,4 +99,14 @@
         top: 0;
         width: 70%;
     }
+}
+
+/*SOCIAL SECTION*/
+
+.socialWrapper {
+    text-align: center;
+}
+.socialWrapper img {
+    height: 35px;
+    margin: 0.5rem;
 }

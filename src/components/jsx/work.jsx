@@ -1,7 +1,10 @@
 import React from 'react';
-import classes from '../css/work.module.css'
+import app_classes from '../../app.module.css'
+import work_classes from '../css/work.module.css'
 import ClipLoader from "react-spinners/ClipLoader";
 import {CSSTransitionGroup} from "react-transition-group";
+import {MainNavBar} from "./mainNavBar";
+import {Footer} from "./footer";
 
 class Work extends React.Component {
     constructor(props) {
@@ -49,7 +52,7 @@ class Work extends React.Component {
             res.push(
                 <div
                     key={src}
-                    className={classes.track}>
+                    className={work_classes.track}>
                     <iframe
                         title={src}
                         src={src}
@@ -66,41 +69,45 @@ class Work extends React.Component {
 
     render() {
         return (
-            <div>
-                {this.state.loading ? (
-                    <div className={classes.loaderWrapper}>
-                        <ClipLoader
-                            css={'text-align: center; display: block; margin: auto; top: 50%;'}
-                            size={200}
-                            color={"#fff"}
-                            loading={this.state.loading}/>
-                        <h2>Fetching Spotify data...</h2>
-                    </div>
-                ) : null}
+            <div className={app_classes.faceWrapper}>
+                <MainNavBar/>
+                <div>
+                    {this.state.loading ? (
+                        <div className={work_classes.loaderWrapper}>
+                            <ClipLoader
+                                css={'text-align: center; display: block; margin: auto; top: 50%;'}
+                                size={200}
+                                color={"#fff"}
+                                loading={this.state.loading}/>
+                            <h2>Fetching Spotify data...</h2>
+                        </div>
+                    ) : null}
 
-                <CSSTransitionGroup
-                    transitionName="transition"
-                    transitionAppear={true}
-                    transitionAppearTimeout={500}
-                    transitionEnterTimeout={500}
-                    transitionLeaveTimeout={300}>
-                <div
-                    className={classes.workWrapper}
-                    style={{opacity: this.state.loading ? 0 : 1 }}>
-                    {this.getTracksIframes()}
-                    <div
-                        className={classes.vimeo}
-                        style={{opacity: this.state.loading ? 0 : 1 }}>
-                        <iframe
-                            title={'vimeo'}
-                            className={classes.vimeoIframe}
-                            src="https://player.vimeo.com/video/320441870?color=ce0000"
-                            frameBorder="0"
-                            allow="autoplay; fullscreen"
-                            allowFullScreen/>
-                    </div>
+                    <CSSTransitionGroup
+                        transitionName="transition"
+                        transitionAppear={true}
+                        transitionAppearTimeout={500}
+                        transitionEnterTimeout={500}
+                        transitionLeaveTimeout={300}>
+                        <div
+                            className={work_classes.workWrapper}
+                            style={{opacity: this.state.loading ? 0 : 1 }}>
+                            {this.getTracksIframes()}
+                            <div
+                                className={work_classes.vimeo}
+                                style={{opacity: this.state.loading ? 0 : 1 }}>
+                                <iframe
+                                    title={'vimeo'}
+                                    className={work_classes.vimeoIframe}
+                                    src="https://player.vimeo.com/video/320441870?color=ce0000"
+                                    frameBorder="0"
+                                    allow="autoplay; fullscreen"
+                                    allowFullScreen/>
+                            </div>
+                        </div>
+                    </CSSTransitionGroup>
                 </div>
-                </CSSTransitionGroup>
+                <Footer/>
             </div>
         );
     }

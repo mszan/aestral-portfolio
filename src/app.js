@@ -1,22 +1,21 @@
 import React from 'react';
 import {BackgroundVideo} from "./components/jsx/backgroundVideo";
 import { CSSTransitionGroup } from 'react-transition-group'
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import {LandingNavBar} from "./components/jsx/landingNavBar";
-import {Social} from "./components/jsx/social";
-import {MainNavBar} from "./components/jsx/mainNavBar";
+import {BrowserRouter as Router, Route, Switch, useLocation} from "react-router-dom";
 import {About} from "./components/jsx/about";
-import {Footer} from "./components/jsx/footer";
 import Work from "./components/jsx/work";
 import {Studios} from "./components/jsx/studios";
 import classes from './app.module.css'
+import {Landing} from "./components/jsx/landing";
 
 
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state={}
+        this.state = {
+        }
     }
+
 
     render() {
         return (
@@ -32,41 +31,19 @@ class App extends React.Component {
 
                         <Switch>
                             <Route exact path="/">
-                                <div className={classes.landingFaceWrapper}>
-                                    <div>
-                                        <img width="100%" src={process.env.PUBLIC_URL + '/img/logos/aestral_logo_slim.png'} alt=""/>
-                                    </div>
-                                    <LandingNavBar/>
-                                    <div className={classes.socialWrapper}>
-                                        <Social/>
-                                    </div>
-                                </div>
+                                <Landing/>
                             </Route>
 
                             <Route exact path="/about">
-                                <div className={classes.mainFaceWrapper}>
-                                    <MainNavBar/>
-                                    <About/>
-                                    <Footer/>
-                                </div>
+                                <About/>
                             </Route>
 
                             <Route exact path="/work">
-                                <div className={classes.mainFaceWrapper}>
-                                    <div className={classes.mainFaceWrapper}>
-                                        <MainNavBar/>
-                                        <Work/>
-                                        <Footer/>
-                                    </div>
-                                </div>
+                                <Work/>
                             </Route>
 
                             <Route exact path="/studios">
-                                <div className={classes.mainFaceWrapper}>
-                                    <MainNavBar/>
-                                    <Studios/>
-                                    <Footer/>
-                                </div>
+                                <Studios/>
                             </Route>
                         </Switch>
                     </CSSTransitionGroup>
