@@ -1,7 +1,7 @@
 import React from 'react';
 import landing_classes from "../css/landing.module.css"
 import {Social} from "./social";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {CSSTransitionGroup} from "react-transition-group";
 
 export const Landing = () => {
@@ -19,20 +19,20 @@ export const Landing = () => {
                     </div>
                     <nav className={landing_classes.navBar}>
                         <ul>
-                            <li><Link to="/about"
-                                      className={`${landing_classes.btn} ${landing_classes.btn2}`}
-                            >ABOUT</Link></li>
+                            <li><NavLink to="/about"
+                                      className={landing_classes.btn}
+                            >ABOUT</NavLink></li>
 
-                            <li><Link to="/work"
-                                      className={`${landing_classes.btn} ${landing_classes.btn2}`}
-                            >WORK</Link></li>
+                            <li><NavLink to="/work"
+                                      className={landing_classes.btn}
+                            >WORK</NavLink></li>
 
-                            <li><Link to="/studios"
-                                      className={`${landing_classes.btn} ${landing_classes.btn2}`}
-                            >ASTRALÉ STUDIOS</Link></li>
+                            <li><NavLink to="/studios"
+                                      className={landing_classes.btn}
+                            >ASTRALÉ STUDIOS</NavLink></li>
 
                             <li><a
-                                className={`${landing_classes.btn} ${landing_classes.btn2}`}
+                                className={landing_classes.btn}
                                 href="https://traktrain.com/aestral"
                             >BEATS</a></li>
                         </ul>

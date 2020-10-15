@@ -6,7 +6,6 @@ import {Landing} from "./components/jsx/landing";
 import {Studios} from "./components/jsx/studios";
 import Work from "./components/jsx/work";
 
-import {CSSTransitionGroup} from 'react-transition-group'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 class App extends React.Component {
